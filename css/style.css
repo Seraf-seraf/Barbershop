@@ -46,7 +46,14 @@
     src: url(../fonts/PTSansNarrow-Bold.ttf) format(truetype);
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -72,6 +79,21 @@ body {
     background: #000000;
 }
 
+.navigation {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.navigation-list {
+    width: 430px;
+}
+
+.navigation-user {
+    max-width: 250px;
+    margin-left: auto;
+}
+
 .navigation-link {
     font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
@@ -80,6 +102,10 @@ body {
     color: #FFFFFF;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.main-container {
+    flex-grow: 1;
 }
 
 .main-index {
@@ -96,8 +122,14 @@ body {
     background-image: url(../images/noisy-texture-80x80-o8-d27-c-1f1f1f-t1\ 3.png);
 }
 
-.advantages-list {
-    text-align: center;
+.page-container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
 }
 
 .advantages-title {
@@ -108,16 +140,33 @@ body {
     line-height: 35px;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.advantages-item {
+    width: 277px;
 }
 
 .index-columns {
+    display: flex;
+    justify-content: space-between;
     color: #242424;
-    background: url(noisy-texture-80x80-o8-d27-c-1f1f1f-t1.png), #FBF7F4;
+    background: url(../images/noisy-texture-80x80-o8-d27-c-1f1f1f-t1\ 3.png), #FBF7F4;
+    padding: 0 40px;
 }
 
 .services {
+    width: 390px;
     text-transform: uppercase;
 }
+
 .services-title {
     font-size: 32px;
     line-height: 35px;
@@ -144,8 +193,13 @@ body {
     color: #242424;
 }
 
+.gallery {
+    width: 390px;
+}
+
 .contacts {
     font-weight: 700;
+    width: 350px;
 }
 .contacts-title {
     font-family: 'PT Sans Narrow', sans-serif;
@@ -172,6 +226,10 @@ body {
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #242424;
+}
+
+.appointment {
+    width: 430px;
 }
 
 .appointment-title {
@@ -204,6 +262,22 @@ body {
     color: #FFFFFF;
     background: url(../images/bg-footer.png), #242424;
     background-repeat: repeat;
+}
+
+.page-footer-container {
+    display: flex;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.footer-contacts {
+    width: 190px;
+    margin-right: 140px;
+}
+
+.footer-social {
+    margin-left: auto;
+    width: 190px;
 }
 
 .page-footer a {
