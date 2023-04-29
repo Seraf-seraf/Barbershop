@@ -318,6 +318,11 @@ body {
     color: #FFFFFF;
 }
 
+.navigation-logo {
+    width: 140px;
+    margin-right: 100px;
+}
+
 .inner-header-title {
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
@@ -336,6 +341,10 @@ body {
     color: inherit;
 }
 
+.catalog-products {
+    display: flex;
+}
+
 .catalog-filter-title {
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
@@ -344,6 +353,15 @@ body {
     line-height: 28px;
     text-transform: uppercase;
     color: #000000;
+}
+
+.catalog-filter {
+    width: 220px;
+    margin-right: 20px;
+}
+
+.catalog-right-column {
+    width: 700px;
 }
 
 .control-label {
