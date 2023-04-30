@@ -137,6 +137,7 @@ body {
 }
 
 .main-inner {
+    padding: 40px;
     color:#242424;
     background-color: #FBF7F4;
     background-image: url(../images/noisy-texture-80x80-o8-d27-c-1f1f1f-t1\ 3.png);
@@ -402,6 +403,7 @@ body {
 .navigation-logo {
     width: 140px;
     margin-right: 100px;
+    align-self: center;
 }
 
 .inner-header-title {
@@ -410,16 +412,20 @@ body {
     font-weight: 700;
     font-size: 32px;
     line-height: 35px;  
+    margin-bottom: 16px;
     text-transform: uppercase;
     color: #242424;
 }
 
 .breadcrumbs {
+    display: flex;
     color: #242424;
+    list-style-type: none;
 }
 
 .breadcrumbs-link {
     color: inherit;
+    margin-right: 32px;
 }
 
 .catalog-products {
@@ -450,13 +456,29 @@ body {
 }
 
 .sorting-container {
+    display: flex;
+    margin-bottom: 16px;
+    padding: 16px;
     background-color: #FFFFFF;
     color: #242424;
+}
+
+.sorting-container .button {
+    width: 56px;
+    height: 44px;
+}
+
+.sorting-type {
+    margin-right: auto;
 }
 
 .button-light {
     color: #242424;
     background-color: #FFFFFF;
+}
+
+.product-list {
+    list-style-type: none;
 }
 
 .product-card {
@@ -486,22 +508,45 @@ body {
     color: #814B18;
 }
 
-.pagination {
+.pagination-container {
+    display: flex;
+    padding: 16px;
     background-color: #FFFFFF;
 }
 
+.pagination {
+    display: flex;
+    list-style-type: none;
+    background-color: #FFFFFF;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
 .pagination-link {
+    display: block;
+    box-sizing: border-box;
+    width: 50px;
+    height: 44px;
     font-family: 'PT Sans', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
     text-align: center;
-    text-transform: uppercase;
+    align-items: flex-start;
+    padding: 14px 20px;
     color: #FFFFFF;
     background-color: #000000;
+    text-decoration: none;
 }
 
+.pagination-show-more {
+    box-sizing: border-box;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    margin-left: auto;
+}
 .pagination-disabled {
     background-color: #595959;
 }
@@ -510,5 +555,3 @@ body {
     color: #242424;
     background: #FFFFFF;
 }
-
-
