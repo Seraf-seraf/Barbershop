@@ -61,6 +61,14 @@ body {
     background-color: #fbf7f4;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .button {
     font-family: inherit;
     font-size: 16px;
@@ -86,7 +94,10 @@ body {
 }
 
 .navigation-list {
-    width: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 470px;
+    list-style-type: none;
 }
 
 .navigation-user {
@@ -94,7 +105,14 @@ body {
     margin-left: auto;
 }
 
+.navigation-user .navigation-link {
+    min-width: 16px;
+    min-height: 22px;
+}
+
 .navigation-link {
+    display: block;
+    padding: 24px 19px;
     font-family: "PT Sans Narrow", sans-serif;
     line-height: 22px;
     font-weight: 700;
@@ -106,6 +124,8 @@ body {
 
 .main-container {
     flex-grow: 1;
+    padding-top: 64px;
+    padding-bottom: 60px;
 }
 
 .main-index {
@@ -130,6 +150,11 @@ body {
 .logo {
     display: block;
     margin: 0 auto;
+    margin-bottom: 64px;
+}
+
+.advantages {
+    padding-bottom: 68px;
 }
 
 .advantages-title {
@@ -147,6 +172,7 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    list-style-type: none;
     color: #FFFFFF;
 }
 
@@ -159,7 +185,12 @@ body {
     justify-content: space-between;
     color: #242424;
     background: url(../images/noisy-texture-80x80-o8-d27-c-1f1f1f-t1\ 3.png), #FBF7F4;
-    padding: 0 40px;
+    margin-bottom: 32px;
+    padding: 40px;
+}
+
+.index-columns:last-child {
+    margin-bottom: 0;
 }
 
 .services {
@@ -171,6 +202,7 @@ body {
     font-size: 32px;
     line-height: 35px;
     text-transform: uppercase;
+    margin-bottom: 28px;
 }
 
 .services-list {
@@ -191,6 +223,7 @@ body {
     line-height: 35px;
     text-transform: uppercase;
     color: #242424;
+    margin-bottom: 28px;
 }
 
 .gallery {
@@ -201,12 +234,14 @@ body {
     font-weight: 700;
     width: 350px;
 }
+
 .contacts-title {
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
     font-size: 32px;
     line-height: 35px;
     text-transform: uppercase;
+    margin-bottom: 28px;
 }
 
 .contacts-subtitle {
@@ -240,6 +275,7 @@ body {
     line-height: 35px;
     text-transform: uppercase;
     color: #242424;
+    margin-bottom: 28px;
 }
 
 .appointment-form {
@@ -268,6 +304,22 @@ body {
     display: flex;
     width: 940px;
     margin: 0 auto;
+    padding: 40px 0;
+}
+
+.footer-contacts-logo {
+    margin-bottom: 27px;
+}
+
+.page-footer-title {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .footer-contacts {
@@ -277,7 +329,30 @@ body {
 
 .footer-social {
     margin-left: auto;
-    width: 190px;
+    max-width: 190px;
+}
+
+.footer-social-title {
+    margin-bottom: 14px;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-bottom: 36px;
+}
+
+.footer-social-item {
+    width: 56px;
+    height: 44px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background-color: #000000;
+}
+
+.footer-social-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .page-footer a {
@@ -290,15 +365,18 @@ body {
 }
 
 .page-footer .about-text {
+    display: block;
     font-family: 'PT Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
     color: #FFFFFF;
+    margin-bottom: 4px;
 }
 
-.footer-contacts-address-phone{
+.footer-contacts .footer-contacts-address-phone{
+    display: block;
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -306,8 +384,11 @@ body {
     line-height: 28px;
     text-decoration-line: underline;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
+
 .footer-contacts-map-link {
+    display: block;
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -381,6 +462,7 @@ body {
 .product-card {
     background: #FFFFFF;
 }
+
 .product-card-link {
     text-decoration: none;
 }
@@ -393,6 +475,7 @@ body {
     line-height: 24px;
     color: #000000;
 }
+
 .product-card-price {
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
@@ -427,4 +510,5 @@ body {
     color: #242424;
     background: #FFFFFF;
 }
+
 
