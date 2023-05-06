@@ -1,4 +1,5 @@
-*,
+/* Исправление отцентровки иконок */
+*:not(a), 
 *::after,
 *::before {
     box-sizing: border-box;
@@ -11,7 +12,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(../fonts/PTSans-Regular.ttf78) format("truetype");
+    src: url(../fonts/PTSans-Regular.ttf) format("truetype");
 }
 
 @font-face {
@@ -35,7 +36,7 @@
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: url(../fonts/PTSans-BoldItalic.ttf) format("ttf");
+    src: url(../fonts/PTSans-BoldItalic.ttf) format("truetype");
 }
 
 @font-face {
@@ -43,7 +44,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(../fonts/PTSansNarrow-Bold.ttf) format(truetype);
+    src: url(../fonts/PTSansNarrow-Bold.ttf) format("truetype");
 }
 
 html {
@@ -70,17 +71,38 @@ body {
 }
 
 .button {
-    font-family: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
     text-align: center;
     color: #FFFFFF;
     background-color: #000000;
+    border: none;
     text-transform: uppercase;
     text-decoration: none;
-    
+    cursor: pointer;
 }
+
+.button-all {
+    padding-right: 44px;
+    background-image: url(../images/icons/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center right 15px;
+}
+
+.button-feedback {
+    background-color: #FFFFFF;
+    color: #242424;
+}
+
+.button + .button {
+    margin-left: 16px;
+} 
 
 .page-header {
     color: #FFFFFF;
@@ -100,26 +122,48 @@ body {
     list-style-type: none;
 }
 
-.navigation-user {
+.navigation-user  {
     max-width: 250px;
     margin-left: auto;
 }
+
+.navigation-link {
+    position: relative;
+    display: block;
+    padding: 24px 19px;
+    font-family: "PT Sans Narrow",sans-serif;
+    line-height: 22px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
 
 .navigation-user .navigation-link {
     min-width: 16px;
     min-height: 22px;
 }
 
-.navigation-link {
-    display: block;
-    padding: 24px 19px;
-    font-family: "PT Sans Narrow", sans-serif;
-    line-height: 22px;
-    font-weight: 700;
-    text-align: center;
-    color: #FFFFFF;
-    text-decoration: none;
-    text-transform: uppercase;
+.navigation-link-login {
+    padding-left: 44px;
+}
+
+.navigation-link-login .navigation-icon {
+    right: auto;
+    left: 20px;
+    margin: auto 0;
+}
+
+.navigation-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #DBDBDB;
 }
 
 .main-container {
@@ -213,6 +257,12 @@ body {
     font-size: 20px;
     line-height: 28px;
     font-weight: 700;
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+.services-item {
+    margin-bottom: 22px;
 }
 
 .services-price {
@@ -245,7 +295,7 @@ body {
     font-size: 32px;
     line-height: 35px;
     text-transform: uppercase;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 .contacts-subtitle {
@@ -255,9 +305,29 @@ body {
     line-height: 28px;
     text-transform: uppercase;
     color: #AF7842;
+    margin-bottom: 8px;
+}
+
+.contacts-schedule {
+    list-style-type: none;
+}
+
+.contacts-navigation {
+    margin-top: 21px; 
+}
+
+.contacts-address-text {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242424;
+    margin-bottom: 8px;
 }
 
 .contacts-phone {
+    display: block;
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
     font-size: 24px;
@@ -265,6 +335,7 @@ body {
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #242424;
+    margin-bottom: 22px;
 }
 
 .appointment {
@@ -334,10 +405,12 @@ body {
 }
 
 .footer-contacts-logo {
+    display: block;
     margin-bottom: 27px;
 }
 
 .page-footer-title {
+    display: block;
     font-family: 'PT Sans Narrow', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -346,6 +419,7 @@ body {
     margin-bottom: 14px;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 14px;
 }
 
 .footer-contacts {
@@ -359,14 +433,15 @@ body {
 }
 
 .footer-social-title {
+    display: block;
     margin-bottom: 14px;
 }
 
 .footer-social-list {
     display: flex;
     flex-wrap: wrap;
-    list-style-type: none;
     margin-bottom: 36px;
+    list-style-type: none;
 }
 
 .footer-social-item {
@@ -381,6 +456,27 @@ body {
     margin-right: 0;
 }
 
+.footer-social-link {
+    display: block;
+    height: 44px;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
+
+.footer-social-instagram {
+    background-image: url(../images/icons/logo-inst.svg);
+}
+
+.footer-social-tw {
+    background-image: url(../images/icons/logo-tw.svg);
+}
+
+.footer-social-vk {
+    background-image: url(../images/icons/logo-vk.svg);
+}
+
 .page-footer a {
     color:#FFFFFF;
 }
@@ -390,8 +486,11 @@ body {
     color: #DBB590;
 }
 
+.footer-contacts-address {
+    margin-bottom: 16px;
+}
+
 .page-footer .about-text {
-    display: block;
     font-family: 'PT Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -410,7 +509,6 @@ body {
     line-height: 28px;
     text-decoration-line: underline;
     text-transform: uppercase;
-    margin-bottom: 16px;
 }
 
 .footer-contacts-map-link {
@@ -423,6 +521,19 @@ body {
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-button {
+    width: 56px;
+    height: 44px;
+    background-image: url(../images/icons/arrow-tail-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
 }
 
 .navigation-logo {
@@ -488,9 +599,25 @@ body {
     color: #242424;
 }
 
-.sorting-container .button {
+.card-grid-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 56px;
     height: 44px;
+    background: #000000;
+}
+
+.card-grid-toggle svg {
+    fill: #FFFFFF;
+}
+
+.card-grid-toggle-current {
+    background-color: #FFFFFF;
+}
+
+.card-grid-toggle-current svg {
+    fill: #000000;
 }
 
 .sorting-type {
@@ -584,6 +711,20 @@ body {
     background-color: #000000;
     text-decoration: none;
 }
+
+.pagination-prev {
+    background-image: url(../images/icons/arrow-left.svg);
+    background-position: center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+}
+
+.pagination-next {
+    background-image: url(../images/icons/arrow-right.svg);
+    background-position: center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+}    
 
 .pagination-show-more {
     box-sizing: border-box;

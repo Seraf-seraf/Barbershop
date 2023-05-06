@@ -8,34 +8,49 @@
     <meta name="description" content="Стригись у крутых барберов по земным ценам!">
     <title>Барбершоп «Бородинский»</title>
     <link rel="stylesheet" href="css/style.css">
-    <link type="image/x-icon" href="images/favicons/icons8-парикмахерская-16.png" rel="icon">
+    <link type="image/x-icon" href="images/icons/icons8-парикмахерская-16.png" rel="icon">
 </head>
 <body>
     <header class="page-header">
-        <nav class="navigation">
-            <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a href="about.html" class="navigation-link">О нас</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="catalog.html" class="navigation-link">Каталог</a>
-                </li>
-                <li class="navigation-item">
-                    <a href="faq.html" class="navigation-link">Частые вопросы</a>
-                </li>
-            </ul>
-            <ul class="navigation-list  navigation-user">
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link"><span class="visually-hidden">Поиск</span></a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link"><span class="visually-hidden">Корзина</span></a>
-                </li>
-                <li class="navigation-item">
-                    <a href="#" class="navigation-link">Вход</a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item">
+            <a class="navigation-link" href="about.html">О нас</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="catalog.html">Каталог</a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="faq.html">Частые вопросы</a>
+          </li>
+        </ul>
+        <ul class="navigation-list navigation-user">
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm-.665 5.249a6.5 6.5 0 111.414-1.414l3.958 3.958-1.414 1.414-3.958-3.958z" />
+              </svg>
+              <span class="visually-hidden">Поиск</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link" href="#">
+              <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.09 6L3.577.905 3.662 0h8.676l.086.905L12.909 6h2.724l-.14 1.124-1 8-.11.876H1.617l-.11-.876-1-8L.368 6H3.09zM5.1 6h5.8l-.38-4H5.48L5.1 6zm-1.717 8l-.75-6h10.734l-.75 6H3.383zM8.5 9.5v3h2v-3h-2zm-3 3v-3h2v3h-2z" />
+              </svg>
+              <span class="visually-hidden">Корзина</span>
+            </a>
+          </li>
+          <li class="navigation-item">
+            <a class="navigation-link navigation-link-login" href="#">
+              <svg class="navigation-icon" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2h5v12H9v2h7V0H9v2zM4.293 3.707L7.536 6.95H0v2h7.536l-3.243 3.242 1.414 1.415 4.95-4.95.707-.707-.707-.707-4.95-4.95-1.414 1.414z" fill="#BDBDBD" />
+              </svg>
+              Вход
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="main-container main-index">
      <div class="page-container">
@@ -126,12 +141,14 @@
                      <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
                  </address>
                  <h3 class="contacts-subtitle">Время работы</h3>
-                 <ul>
-                     <li class="contacts-shedule-item">пн—пт: с 10:00 до 22:00</li>
-                     <li class="contacts-shedule-item">сб—вс: с 10:00 до 19:00</li>
+                 <ul class="contacts-schedule">
+                   <li >пн—пт: с 10:00 до 22:00</li>
+                   <li >сб—вс: с 10:00 до 19:00</li>
                  </ul>
-                 <a href="#" class="button">Как проехать</a>
-                 <a href="#" class="button button-feedback">Обратная связь</a>
+                <p class="contacts-navigation">     
+                    <a href="#" class="button">Как проехать</a>
+                    <a href="#" class="button button-feedback">Обратная связь</a>
+                </p>
              </section>
 
              <section class="appointment">
@@ -177,9 +194,9 @@
             <section class="footer-contacts">
                 <h2 class="visually-hidden">Контакты</h2>
                 <img class="footer-contacts-logo" src="images/logo-footer.svg" alt="Логотип барбершоп «Бородинский»" >
-                <address>
+                <address class="footer-contacts-address">
                     <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-                    <a class="footer-contacts-address-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+                    <a class="footer-contacts-address-phone" href="tel:+78005558628">8 800 555-86-28</a>
                 </address>
                 <a href="#" class="footer-contacts-map-link">Как нас найти?</a>
             </section>
@@ -199,17 +216,17 @@
                 <h2 class="footer-social-title">Давайте дружить</h2>
                 <ul class="footer-social-list">
                     <li class="footer-social-item">
-                        <a class="button" href="#">
+                        <a class="footer-social-link footer-social-tw" href="#">
                             <span class="visually-hidden">Твиттер</span>
                         </a>
                     </li>
                     <li class="footer-social-item">
-                        <a class="button" href="#">
+                        <a class="footer-social-link footer-social-vk" href="#">
                             <span class="visually-hidden">Вконтакте</span>
                         </a>
                     </li>
                     <li class="footer-social-item">
-                        <a class="button" href="#" >
+                        <a class="footer-social-link footer-social-instagram" href="#" >
                             <span class="visually-hidden">Инстаграм</span>
                         </a>
                     </li>
