@@ -21,7 +21,7 @@
                   <a class="navigation-link" href="about.html">О нас</a>
                 </li>
                 <li class="navigation-item">
-                  <a class="navigation-link" href="catalog.html">Каталог</a>
+                  <a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a>
                 </li>
                 <li class="navigation-item">
                   <a class="navigation-link" href="faq.html">Частые вопросы</a>
@@ -45,9 +45,9 @@
                   </a>
                 </li>
                 <li class="navigation-item">
-                  <a class="navigation-link navigation-link-login" href="#">
+                  <a class="navigation-link" href="#">
                     <svg class="navigation-icon" width="16" height="16" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6C7.65685 6 9 4.65685 9 3C9 1.34315 7.65685 0 6 0C4.34315 0 3 1.34315 3 3C3 4.65685 4.34315 6 6 6ZM6 8C2.68629 8 0 10.6863 0 14H12C12 10.6863 9.31371 8 6 8Z" fill="#BDBDBD"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6C7.65685 6 9 4.65685 9 3C9 1.34315 7.65685 0 6 0C4.34315 0 3 1.34315 3 3C3 4.65685 4.34315 6 6 6ZM6 8C2.68629 8 0 10.6863 0 14H12C12 10.6863 9.31371 8 6 8Z"/>
                     </svg>
                     <span class="visually-hidden">Профиль</span>
                   </a>
@@ -80,11 +80,11 @@
                         <legend class="catalog-filter-title">Цена:</legend>
               
                         <label class="catalog-filter-label">
-                          от <input class="catalog-filter-input" type="number" name="min-price"> ₽
+                          от <input class="catalog-filter-input" type="number" name="min-price" value="50"> ₽
                         </label>
               
                         <label class="catalog-filter-label">
-                          до <input class="catalog-filter-input" type="number" name="max-price"> ₽
+                          до <input class="catalog-filter-input" type="number" name="max-price" value="150"> ₽
                         </label>
               
                         <button class="range-toggle toggle-min">
