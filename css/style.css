@@ -614,31 +614,31 @@ body {
 }
 
 .form-label {
-    line-height: 22px;
+    margin-bottom: 8px;
+    line-height: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #242424;
-    margin-bottom: 8px;
 }
-
+  
 .form-label-icon {
     position: relative;
     padding-right: 16px;
 }
-
+  
 .info {
     position: absolute;
     width: 16px;
     height: 16px;
     margin-top: 4px;
     margin-left: 2px;
+    padding: 0;
     background-color: transparent;
     border: none;
     background-image: url(../images/icons/info.svg);
     background-repeat: no-repeat;
     background-position: center;
 }
-
+  
 .page-footer {
     font-family: 'PT Sans', sans-serif;
     font-style: normal;
@@ -1252,6 +1252,7 @@ body {
     box-sizing: border-box;
     margin-left: auto;
 }
+
 .pagination-disabled {
     background-color: #595959;
 }
