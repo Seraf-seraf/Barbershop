@@ -53,10 +53,10 @@
       </nav>
     </header>
     <main class="main-container main-index">
-     <div class="page-container">
+      <div class="page-container">
          
          <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
-         <img class="logo" src="images/logo-full.svg" width="361px" height="152px" alt="Логотип Барбершопа «Бородинский»" ></img>
+         <img class="logo" src="images/logo-full.svg" width="361" height="152" alt="Логотип Барбершопа «Бородинский»">
          <section class="advantages">
              <h2 class="visually-hidden">Преимущества</h2>
              <ul class="advantages-list">
@@ -100,35 +100,41 @@
 
              <section class="gallery">
                 <h2 class="gallery-title">Фотогалерея</h2>
-                <img class="slider-image" src="images/gallery-1.jpg" alt="Примеры работ">
-                <button class="slider-button slider-prev" type="button">
-                    <span class="visually-hidden">Предыдущее фото</span>
-                </button>
-                <button class="slider-button slider-next" type="button">
-                    <span class="visually-hidden">Следующее фото</span>
-                </button>
-                <ol class="slider-pagination">
-                    <li class="slider-pagination-item">
-                        <button class="slider-pagination-button slider-pagination-button-current" type="button"">
-                            <span class="visually-hidden">1 фото</span>
-                        </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                        <button class="slider-pagination-button" type="button"">
-                            <span class="visually-hidden">2 фото</span>
-                        </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                        <button class="slider-pagination-button" type="button"">
-                            <span class="visually-hidden">3 фото</span>
-                        </button>
-                    </li>
-                    <li class="slider-pagination-item">
-                        <button class="slider-pagination-button" type="button"">
-                            <span class="visually-hidden">4 фото</span>
-                        </button>
-                    </li>
-                </ol>
+                <div class="slider">
+                  <div class="slider-wrapper">
+                    <img class="slider-image" src="images/gallery-1.jpg" alt="Примеры работ">
+                    <div class="slider-controls">
+                      <button class="slider-button slider-prev" type="button">
+                          <span class="visually-hidden">Предыдущее фото</span>
+                      </button>
+                      <button class="slider-button slider-next" type="button">
+                          <span class="visually-hidden">Следующее фото</span>
+                      </button>
+                    </div>
+                    <ol class="slider-pagination">
+                        <li class="slider-pagination-item">
+                            <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                                <span class="visually-hidden">1 фото</span>
+                            </button>
+                        </li>
+                        <li class="slider-pagination-item">
+                            <button class="slider-pagination-button" type="button">
+                                <span class="visually-hidden">2 фото</span>
+                            </button>
+                        </li>
+                        <li class="slider-pagination-item">
+                            <button class="slider-pagination-button" type="button">
+                                <span class="visually-hidden">3 фото</span>
+                            </button>
+                        </li>
+                        <li class="slider-pagination-item">
+                            <button class="slider-pagination-button" type="button">
+                                <span class="visually-hidden">4 фото</span>
+                            </button>
+                        </li>
+                    </ol>
+                  </div>
+                </div>
             </section>
          </div>
 
@@ -159,9 +165,10 @@
                     <label class="form-label" for="appointment-date">
                       Дата
                       <button class="info">
-                        <span class="visually-hidden">Посмотреть дополнительную информацию</span></button>
+                        <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                      </button>
                     </label>
-                    <input type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2020">
+                    <input class="field" type="text" id="appointment-date" name="appointment-date" placeholder="01.01.2020">
                   </p>
                   <p class="field-group appointment-form-time">
                     <label class="form-label" for="appointment-time">
@@ -170,13 +177,13 @@
                         <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                       </button>
                     </label>
-                    <input type="text" id="appointment-time" name="appointment-time" placeholder="10:00">
+                    <input class="field" type="text" id="appointment-time" name="appointment-time" placeholder="10:00">
                   </p>
                   <p class="field-group appointment-form-phone">
                     <label class="form-label" for="appointment-phone">
                       Телефон
                     </label>
-                    <input class="field" type="text" id="appointment-phone" name="appointment-phone" placeholder="+7 800 000-00-00">
+                    <input class="field" type="text" id="appointment-phone" name="appointment-phone" placeholder="+7 800 000-00-00" required>
                   </p>
                   <p class="field-group appointment-form-name">
                     <label class="form-label" for="appointment-name">
@@ -186,8 +193,9 @@
                   </p>
                   <button class="button appointment-submit" type="submit">Записаться</button>
                 </form>
+             </section>
          </div>
-     </div>
+      </div>
     </main>
     <footer class="page-footer">
         <div class="page-footer-container">
