@@ -7,10 +7,11 @@
     <meta name="keywords" content="шампуни, гели, аксессуары, для мужчин">
     <meta name="description" content="Каталог барбершопа «Бородинский». Лучшие шампуни и аксессуары у нас!">
     <link rel="stylesheet" href="css/style.css">
-    <link href="images/icons/favicon.ico" rel="icon">
+    <link rel="icon" sizes="32x32" href="images/icons/fav-ico.png">
     <title>Каталог</title>
 </head>
 <body>
+    <!-- Шапка -->
     <header class="page-header">
         <nav class="navigation">
             <a class="navigation-logo" href="index.html">
@@ -26,15 +27,15 @@
                 <li class="navigation-item">
                   <a class="navigation-link" href="faq.html">Частые вопросы</a>
                 </li>
-              </ul>
-              <ul class="navigation-list navigation-user">
+            </ul>
+            <ul class="navigation-list navigation-user">
                 <li class="navigation-item">
-                  <a class="navigation-link" href="#">
+                    <a class="navigation-link" href="#">
                     <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M11 6.5a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm-.665 5.249a6.5 6.5 0 111.414-1.414l3.958 3.958-1.414 1.414-3.958-3.958z" />
                     </svg>
                     <span class="visually-hidden">Поиск</span>
-                  </a>
+                    </a>
                 </li>
                 <li class="navigation-item">
                   <a class="navigation-link" href="#">
@@ -55,8 +56,8 @@
               </ul>
         </nav>
     </header>
-
-    <main class="main-inner">         
+    <!-- Основное содержимое -->
+    <main class="main-inner">
         <div class="page-container">
             <header class="inner-header">
                 <h1 class="inner-header-title">Каталог</h1>
@@ -71,28 +72,26 @@
             </header>
             <section class="catalog-products">
                 <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
-                    <!--временно добавим атрибут hidden, чтобы заголовок не рушил сетку-->
-                    <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
                     <!-- Фильтрация -->
                     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                         <fieldset class="catalog-filter-group">
                             <legend class="catalog-filter-title">Цена</legend>
-              
+
                             <div class="range">
                                 <div class="range-scale">
                                     <div class="range-bar" style="left: 42px; width: 136px">
-                                        <button class="range-toggle toggle-min">
+                                        <button class="range-toggle toggle-min" type="button">
                                             <span class="visually-hidden">Изменить минимальную цену.</span>
                                         </button>
-                                        <button class="range-toggle toggle-max">
+                                        <button class="range-toggle toggle-max" type="button">
                                             <span class="visually-hidden">Изменить максимальную цену.</span>
                                         </button>
                                     </div>
                                 </div>
-              
+
                                 <div class="range-wrapper-inputs">
                                     <label class="catalog-filter-label">
-                                        от <input class="range-input" type="number" value="450" name="min-price" style="width: 39px"> ₽
+                                        от <input class="range-input" type="number" value="50" name="min-price"> ₽
                                     </label>
                                     <label class="catalog-filter-label">
                                         до <input class="range-input" type="number" value="1500" name="max-price" style="width: 39px"> ₽
@@ -148,7 +147,7 @@
                             </li>
                             </ul>
                         </fieldset>
-              
+
                         <fieldset class="catalog-filter-group">
                             <legend class="catalog-filter-title">Группы товаров</legend>
                             <ul class="catalog-filter-list">
@@ -177,20 +176,22 @@
                         </fieldset>
                         <button class="button" type="submit">Показать</button>
                     </form>
+                    <!-- Основная часть каталога -->
                     <div class="catalog-right-column">
+                        <!-- Сортировка товаров по цене и популярности -->
                             <div class="sorting-container">
                                 <form class="sorting-type">
                                 <div class="select">
                                     <label class="visually-hidden" for="sorting">Сортировка</label>
                                     <select class="select-control" id="sorting" name="sorting">
-                                        <option value="popular">Сначала популярное</option>
+                                        <option value="popular">Сначала дорогое</option>
                                         <option value="cheap">Сначала дешёвое</option>
-                                        <option value="expensive">Сначала дорогое</option>
+                                        <option value="expensive">Сначала популярное</option>
                                     </select>
                                 </div>
                                 <button class="visually-hidden" type="submit">Отсортировать продукты</button>
                                 </form>
-                    
+                                <!-- Способ отображения каталога - списком или карточками -->
                                 <a href="#" class="card-grid-toggle" >
                                     <svg width="16" height="16" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                                         <path d="M2 0a2 2 0 100 4 2 2 0 000-4zm0 6a2 2 0 100 4 2 2 0 000-4zm-2 8a2 2 0 114 0 2 2 0 01-4 0zM7 1a1 1 0 000 2h8a1 1 0 100-2H7zM6 8a1 1 0 011-1h8a1 1 0 110 2H7a1 1 0 01-1-1zm1 5a1 1 0 100 2h8a1 1 0 100-2H7z" />
@@ -198,121 +199,88 @@
                                     <span class="visually-hidden">Показать список</span>
                                 </a>
                                 <a href="#" class="card-grid-toggle card-grid-toggle-current" >
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 2a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM0 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-8 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
+                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM0 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-8 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"/>
                                     </svg>
                                     <span class="visually-hidden">Показать карточки</span>
                                 </a>
                             </div>
+
                         <ul class="product-list">
                             <li class="product-card">
                                 <a href="product.html" class="product-card-image-link">
-                                    <img class="product-card-image" src="images/images-catalog/catalog-1.jpg" alt="" width="220" height="168">                                
+                                    <img class="product-card-image" src="images/images-catalog/catalog-1.jpg" alt="" width="220" height="200">
                                 </a>
                                 <div class="product-card-content">
                                     <a href="" class="product-card-title-link">
-                                        <h3 class="product-card-title">
-                                            Шампунь для мужчин Brews Daily
-                                        </h3>
+                                        <h3 class="product-card-title">Шампунь для мужчин Brews Daily</h3>
                                     </a>
-                                    <span class="product-card-price">
-                                        744 ₽
-                                    </span>
-                                    <a href="#" class="product-card-button button">
-                                        Купить
-                                    </a>
+                                    <span class="product-card-price">744 ₽</span>
+                                    <a href="#" class="product-card-button button">Купить</a>
                                 </div>
                             </li>
                             <li class="product-card">
                                 <a href="#" class="product-card-image-link">
-                                    <img class="product-card-image" src="images/images-catalog/catalog-2.jpg" alt="" width="220" height="168">      
+                                    <img class="product-card-image" src="images/images-catalog/catalog-2.jpg" alt="" width="220" height="200">
                                 </a>
                                 <div class="product-card-content">
                                     <a href="" class="product-card-title-link">
-                                        <h3 class="product-card-title">
-                                            Syoss шампунь Men Power & Strength
-                                        </h3>
+                                        <h3 class="product-card-title">Syoss шампунь Men Power & Strength</h3>
                                     </a>
-                                    <span class="product-card-price">
-                                        160 ₽
-                                    </span>
-                                    <a href="#" class="product-card-button button">
-                                        Купить
-                                    </a>
+                                    <span class="product-card-price">160 ₽</span>
+                                    <a href="#" class="product-card-button button">Купить</a>
                                 </div>
                             </li>
                             <li class="product-card">
                                 <a href="#" class="product-card-image-link">
-                                    <img class="product-card-image" src="images/images-catalog/catalog-3.jpg" alt="" width="220" height="168">                                
+                                    <img class="product-card-image" src="images/images-catalog/catalog-3.jpg" alt="" width="220" height="200">
                                 </a>
                                 <div class="product-card-content">
                                     <a href="" class="product-card-title-link">
-                                        <h3 class="product-card-title">
-                                            Schauma шампунь для мужчин «Сила и объём с хмелем»
-                                        </h3>
+                                        <h3 class="product-card-title">Schauma шампунь для мужчин «Сила и объём с хмелем»</h3>
                                     </a>
-                                    <span class="product-card-price">
-                                        94 ₽
-                                    </span>
-                                    <a href="#" class="product-card-button button">
-                                        Купить
-                                    </a>
+                                    <span class="product-card-price">94 ₽</span>
+                                    <a href="#" class="product-card-button button">Купить</a>
                                 </div>
                             </li>
                             <li class="product-card">
                                 <a href="#" class="product-card-image-link">
-                                    <img class="product-card-image" src="images/images-catalog/catalog-4.jpg" alt="" width="220" height="168">                                
+                                    <img class="product-card-image" src="images/images-catalog/catalog-4.jpg" alt="" width="220" height="200">
                                 </a>
                                 <div class="product-card-content">
                                     <a class="product-card-title-link" href="">
-                                        <h3 class="product-card-title">
-                                            Nivea Men шампунь-уход  «Экстремальная свежесть с ментолом»
-                                        </h3>
+                                        <h3 class="product-card-title">Nivea Men шампунь-уход  «Экстремальная свежесть с ментолом»</h3>
                                     </a>
-                                    <span class="product-card-price">
-                                        173 ₽
-                                    </span>
-                                    <a href="#" class="product-card-button button">
-                                        Купить
-                                    </a>
+                                    <span class="product-card-price">173 ₽</span>
+                                    <a href="#" class="product-card-button button">Купить</a>
                                 </div>
                             </li>
                             <li class="product-card">
                                 <a href="#" class="product-card-image-link">
-                                    <img class="product-card-image" src="images/images-catalog/catalog-5.jpg" alt="" width="220" height="168">                               
+                                    <img class="product-card-image" src="images/images-catalog/catalog-5.jpg" alt="" width="220" height="200">
                                 </a>
                                 <div class="product-card-content">
                                     <a href="" class="product-card-title-link">
-                                        <h3 class="product-card-title">
-                                            Шампунь Amplifier Thickening
-                                        </h3>
+                                        <h3 class="product-card-title">Шампунь Amplifier Thickening</h3>
                                     </a>
-                                    <span class="product-card-price">
-                                        441 ₽
-                                    </span>
-                                    <a href="#" class="product-card-button button">
-                                        Купить
-                                    </a>
+                                    <span class="product-card-price">441 ₽</span>
+                                    <a href="#" class="product-card-button button">Купить</a>
                                 </div>
                             </li>
                             <li class="product-card">
                                 <a href="#" class="product-card-image-link">
-                                    <img class="product-card-image" src="images/images-catalog/catalog-6.jpg" alt="" width="220" height="168">                          
+                                    <img class="product-card-image" src="images/images-catalog/catalog-6.jpg" alt="" width="220" height="200">
                                 </a>
                                 <div class="product-card-content">
                                     <a href="" class="product-card-title-link">
-                                        <h3 class="product-card-title">
-                                            American Crew шампунь Anti-Dandruff
-                                        </h3>
+                                        <h3 class="product-card-title">American Crew шампунь Anti-Dandruff</h3>
                                     </a>
-                                    <span class="product-card-price">
-                                        904 ₽
-                                    </span>
-                                    <a href="#" class="product-card-button button">
-                                        Купить
-                                    </a>
+                                    <span class="product-card-price">904 ₽</span>
+                                    <a href="#" class="product-card-button button">Купить</a>
                                 </div>
                             </li>
                         </ul>
+                        <!-- Навигация по страницам каталога -->
                         <div class="pagination-container">
                             <ul class="pagination">
                                 <li class="pagination-item">
@@ -347,7 +315,7 @@
             </section>
         </div>
     </main>
-
+    <!-- Подвал страницы -->
     <footer class="page-footer">
         <div class="page-footer-container">
             <section class="footer-contacts">
